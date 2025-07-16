@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>하이퍼링크 관련 태그</title>
+  </head>
+  <body>
+    <h1>a(anchor : 연결, 고정) 태그</h1>
+    <pre>
+        현재 HTML 문서와 다른 HTML 문서를 연결 시켜
+        페이지를 이동할 수 있게 만드는 태그
+
+        a 태그로 감싸진 글/내용== 하이퍼 텍스트
+
+        하이퍼 텍스트는 다른 문서와 구분되는 HTML만의 핵심기능
+    </pre>
+
+    <hr />
+    <h3>a 태그의 속성</h3>
+    <pre>
+        href(HyperText REFerence): 연결할 주소를 지정하는 속성
+        target = "_blank" : 새 탭에서 열기
+    </pre>
+    <ol>
+      <li>
+        <a href="01_글자관련태그.html">글자관련 태그로 이동</a>
+      </li>
+      <li>
+        <a href="04_표관련태그.html" target="_blank">표관련 태그로 이동</a>
+      </li>
+    </ol>
+
+    <h1>페이지 내부에서 점프하기</h1>
+    <pre>
+        한 페이지 내부에서 
+        지정된 id 속성을 가진 태그로 이동
+
+        id(식별자) 속성:
+            하나의 HTML 문서 내부에서
+            각각의 HTML 태그를 구분하는 식별 값
+            ->중복 X
+
+        class 는 중복으로 이름 사용 가능
+        id    는 중복으로 이름 사용 지양
+    </pre>
+
+    <ul>
+      <li><a href="#img1">1번 이미지 위치로 이동하기</a></li>
+      <li><a href="#img2">2번 이미지 위치로 이동하기</a></li>
+      <li><a href="#img3">3번 이미지 위치로 이동하기</a></li>
+    </ul>
+
+    <h3 id="img1">1번이미지 위치</h3>
+    <img src="images/flowers/flower5.jpg" />
+    <h3 id="img2">2번이미지 위치</h3>
+    <img src="images/dogs/dog5.jpg" />
+    <h3 id="img3">3번이미지 위치</h3>
+    <img src="images/cats/cat5.jpg" />
+
+    <h2>a 태그로 이동하기</h2>
+    <!-- 다음 사이트로 이동하기-->
+    <a href="https://www.daum.net/">다음</a>
+    <!-- 구글 사이트로 이동하기-->
+    <a href="https://www.google.com/">구글</a>
+
+    <h2>a 태그 + img 태그 -> 이미지를 클릭하면 이동</h2>
+    <a href="https://www.naver.com/">
+      <img
+        src="data:image/png;base64,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"
+        alt="네이버 로고"
+    /></a>
+  </body>
+</html>

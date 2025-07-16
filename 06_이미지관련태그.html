@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 관련 태그</title>
+  </head>
+  <body>
+    <h1>img 태그</h1>
+
+    <pre>
+        웹 문서에서 사진이나 그림같은 이미지를 삽입하는 용도의 태그
+
+        [속성]
+        (속성 : 시작 태그에 작성하는 내용)
+
+        1. src : 삽입할 이미지의 경로를 작성하는 속성
+        2. width / height : 너비 / 높이를 지정하는 속성
+        3. alt(대안) : 이미지 설명을 작성하는 속성 -> 이미지 출력 X 일 경우 대신 글자출력
+        + 스크린 리더가 이미지의 설명을 읽어줌
+
+    </pre>
+
+    <h3>img 예시</h3>
+    <img
+      src="data:image/jpeg;base64,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"
+    />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <h2>절대 경로로 이미지 출력하기</h2>
+    <pre>
+        절대 경로 : 변하지 않는 기준점으로부터 목표까지의 경로
+        (서울 종로구 삼일대로 17길 51 5층)
+
+        윈도우 기준 : C드라이브, D드라이브 기준 이미지의 경로나 파일 경로 설정
+    </pre>
+    <img
+      src="C://Users/user/Desktop/frontend-workspace/01_HTML/images/cats/cat1.jpg"
+      alt="절대경로 사진"
+    />
+    <!-- 컴퓨터 절대 경로는 라이브 서버로 확인 불가-->
+    <hr />
+    <h2>상대 경로로 이미지 출력하기</h2>
+    <pre>
+        상대 경로 : 현재 파일/페이지 위치를 기준으로 하여
+        목표까지의 경로를 나타내는 것
+        (오른쪽 뒤의 뒤에 사람에게 전달)
+        (학원 1층으로 내려가서 왼쪽으로 이동)
+    </pre>
+    <img src="images/cats/cat1.jpg" alt="상대경로 사진" />
+    <!--상대 경로는 라이브 서버로 확인 가능-->
+
+    <hr />
+    <h2>고정 크기 단위(px): 항상 고정된 크기를 지님</h2>
+    <!--
+    평균 width 기준으로 기기 너비 예상
+    1. desktop 대형 모니터 1440 ~ 1920 px
+    2. notebook 노트북 1280 ~ 1440 px
+    3. tablet 태블릿 768 ~ 1024 px
+    4. mobile(가로) 640 ~ 768 px
+    4. mobile(세로) 360 ~ 430 px
+
+    우리가 mm 나 cm 를 사용하는 것처럼 
+    컴퓨터에서는 크기 단위를 px로 가짐
+    -->
+    <img src="images/dogs/dog1.jpg" width="300px" height="240" alt="" />
+    <img src="images/dogs/dog2.jpg" width="300px" height="240" alt="" />
+    <img src="images/dogs/dog3.jpg" width="300px" height="240" alt="" />
+
+    <h2>가변 크기 단위(%) : 화면 또는 영역에 대한 상대적인 크기 단위</h2>
+    <!-- 화면 너비의 15%만큼을 img 너비로 지정-->
+    <img src="images/flowers/flower1.jpg" width="15%" height="240px" />
+    <img src="images/flowers/flower2.jpg" width="15%" height="240px" />
+    <img src="images/flowers/flower3.jpg" width="15%" height="240px" />
+    <hr />
+    <h2>고정 + 가변 크기</h2>
+    <pre>
+        고정 크기로 설정된 태그 내부에서 일정한 크기의 이미지 또는 태그를 출력하고 싶을 때
+        가변 크기(%)를 이용해서 지정
+    </pre>
+    <div style="width: 1280px; height: 300px">
+      <img src="images/cats/cat1.jpg" width="25%" height="70%" />
+      <img src="images/dogs/dog1.jpg" width="25%" height="70%" />
+      <img src="images/flowers/flower1.jpg" width="25%" height="70%" />
+    </div>
+  </body>
+</html>

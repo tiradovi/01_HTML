@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영역 관련 태그</title>
+    <style>
+      div,
+      span {
+        /*
+        border : 1px solid black;
+        border : 선 관련 속성
+        1px : 선 두께
+        solid : 실선
+        black : 선 색상 
+        */
+        border: 1px solid black;
+      }
+      .r {
+        background-color: red;
+        width: 300px;
+        height: 300px;
+      }
+      .test {
+        width: 200px;
+        height: 200px;
+      }
+      .g {
+        background-color: green;
+      }
+      .y {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>style 태그 내용 적용 확인</h3>
+    <div class="test g"></div>
+    <div class="r"></div>
+    <div class="y test"></div>
+
+    <h1>block 형식</h1>
+    <pre>
+    화면 공간 수직 분할
+    (세로 화면을 가로로 잘라서 층을 나눔)
+
+    한층을 모두 차지함
+
+    width, height 와 같은 크기 지정 속성 사용 가능
+
+    block 형식의 태그
+    h1~h6(제목), p/pre(문단), hr(수평선), div(영역 분할), 시맨틱 태그(div 태그에 이름을 넣는 태그)
+    </pre>
+    <h3>h3는 블록 형식 태그입니다.</h3>
+    <pre>
+    블록 형식은 작성된 내용이 짧더라도 한줄을 모두 차지하기에
+    다음 태그내용은 다음 줄에 작성됩니다.
+    </pre>
+    <pre>
+    pre옆에 가로로 이어서 작성 X
+    태그를 열고 닫을 때마다 층이 구분
+    </pre>
+    <h1>inline 형식</h1>
+    <pre>
+        화면을 수평 분할
+        (가로 화면을 세로로 잘라서 호(열)을 나눔)
+
+        한층을 모두 차지하지 않고 내부에 작성된 내용 크기만큼 차지
+
+        width, height 와 같은 크기 지정 속성 사용 불가능
+
+        inline 형식의 태그
+        b(굵게), i(기울이기), mark(글 배경칠하기), span(영역 분할) 등
+    </pre>
+    <p>
+      <strong>inline형식은</strong>
+      <em>행을 분할하고 한 열에서 이어서 작성하기에</em>
+      <mark>줄이 바뀌지 않고 옆으로 작성</mark>
+      <br />
+      <span class="y">첫 번째 span</span>
+      <span class="g">두 번째 span</span>
+      <span class="r">세 번째 span</span>
+    </p>
+
+    <h1>inline - block 형식</h1>
+    <pre>
+    inline의 특징 중 수평분할(줄을 세로로 자름, 열 나눔)
+    block의 특징 중 크기 지정 가능
+    장점을 합쳐놓은 태그내용은
+
+    대표적인 태그 : img 태그, iframe 태그
+
+    iframe 태그: 웹 문서(html)내부에 또 다른 웹 문서를 추가하는 태그
+    </pre>
+
+    <iframe
+      src="00_index.html"
+      frameborder="0"
+      width="500px"
+      height="500px"
+    ></iframe>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/m7AVDeJsQn0?si=lbBXZ0FkkTfsk7A_"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/CgCVZdcKcqY?si=4i1oh6gEsv2RYCwV"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>

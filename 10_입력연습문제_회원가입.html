@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 폼</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#">
+      <label
+        >이름 :
+        <input
+          type="text"
+          name="username"
+          placeholder="이름을 입력하세요"
+          required
+      /></label>
+      <!-- 
+      required 필수 작성해야하는 경우 작성하는 input 태그
+       -->
+      <!--
+      input 에서 value는 소비자가 작성하지 않았을 때 데이터를 빈값으로 전달하지 않도록 기본값 설정(필수X)
+      checkbox, radio, option 에서는 소비자가 설정해야 할 경우에 소비자가 선택한값 지정 필요(필수) 
+      -->
+      <h4>SNS에서 이메일 가지고 온 후 회원가입 진행할 때</h4>
+      <!--
+      readonly = SNS 이메일을 가지고 오거나
+      소비자가 수정하지 못하고 인지한 후, 
+      동의에 대한 절차를 진행해야할 때 사용
+      -->
+      <label>
+        이메일 :
+        <input
+          type="email"
+          name="useremail"
+          value="google@google.com"
+          readonly
+        />
+      </label>
+      <label>
+        비밀번호 :
+        <input
+          type="password"
+          name="password"
+          placeholder="비밀번호를 입력하세요"
+          required
+        />
+      </label>
+
+      <label>
+        성별 :
+        <select name="gender">
+          <option value="남성">남성</option>
+          <option value="여성">여성</option>
+        </select>
+      </label>
+
+      <button>제출하기</button>
+    </form>
+  </body>
+</html>

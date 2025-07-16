@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력 관련 태그</title>
+  </head>
+  <body>
+    <h1>form 태그/ input 태그</h1>
+    <h3>form 태그</h3>
+    <pre>
+        입력양식을 작성하는 판(영역, 공간)
+        내부에 작성된 입력 값을 지정된 곳으로 제출하는 역할
+
+        [속성]
+        1) action : 제출될 곳을 지정하는 속성(제출할 주소를 작성)
+        2) method(방식) : 설정된 곳으로 데이터를 전달하는 방식
+              서버에 저장할 것인지, 서버에 저장된 데이터를 호출할 것인지 방식 선택
+        3) name : 이름을 지정하는 속성(JS 사용)
+        4) target : 제출된 페이지를 현재/새 탭으로 열기
+    </pre>
+
+    <h3>input 태그</h3>
+    <pre>
+        웹 문서에서 사용자(클라이언트)가 입력할 수 있는 양식을 제공하는 태그
+        많은 타입이 존재하고, input의 변형 형태도 다수 존재
+
+        * input 태그에는 name 속성이 필수로 작성되어야 한다.(거의 무조건 작성)
+    </pre>
+    <h3>form, input 테스트</h3>
+    <form action="result.html">
+      이름<input type="text" name="user-name" />
+      <button>제출버튼</button>
+    </form>
+
+    <hr />
+    <h3>텍스트 관련 input 태그</h3>
+
+    <pre>
+      type = "text" : 한 줄 텍스트 입력 상자 (기본값)
+      
+      type = "password" : 비밀번호 입력 상자(모자이크)
+      type = "url"
+      type = "search"
+      type = "tel"
+      type = "email"
+       -> 모양은 전부 text와 동일, 용도 구분용(유효성 검사)
+    </pre>
+
+    <form action="result.html">
+      아이디 : <input type="text" name="input-id" />
+      <br />
+      비밀번호 : <input type="password" name="input-pw" />
+      <button>로그인(제출)</button>
+    </form>
+    <hr />
+    <h3>숫자 관련 input 태그</h3>
+    <pre>
+      type="number" : 숫자만 입력 가능한 입력 상자
+      type="range" : 슬라이드바를 이용해서 숫자를 지정
+                      (단독 사용 불가, JavaScript와 혼합하여 사용)
+
+      [속성]
+      1. min : 최소값
+      2. max : 최대값
+      3. step : 숫자가 증가/감소하는 간격
+      4. value : 초기 값 설정
+    </pre>
+
+    <!--
+      1. min : 최소값
+      2. max : 최대값
+      3. step : 숫자가 증가/감소하는 간격
+      4. value : 초기 값 설정
+    -->
+    <form action="result.html">
+      점수입력:
+      <input
+        type="range"
+        min="0"
+        max="100"
+        step="5"
+        value="100"
+        name="score1"
+      />
+      <br />
+      점수입력:
+      <input
+        type="number"
+        min="0"
+        max="100"
+        step="5"
+        value="30"
+        name="score2"
+      />
+      <button>제출</button>
+    </form>
+    <hr />
+
+    <h3>날짜/시간 관련 input 태그</h3>
+    <ul>
+      <li><input type="date" /></li>
+      <li><input type="month" /></li>
+      <li><input type="week" /></li>
+      <li><input type="time" /></li>
+      <li><input type="datetime-local" /></li>
+    </ul>
+    <h3>radio, checkbox</h3>
+    <pre>
+      여러 연관된 값을 묶어서 선택하는 경우에 사용
+
+      radio : 여러 값 중 하나 선택
+      ex) 성별
+
+      checkbox : 여러 값 중 원하는 모든 것 선택
+      ex)상세검색, 관심분야, 취미
+
+      <strong style="color: red;">
+        연관된 radio, checkbox는 같은 name 속성 값을 가져야 한다.
+      </strong>
+    </pre>
+
+    <h4>radio 확인</h4>
+    <input type="radio" name="team" value="A" />A팀
+    <input type="radio" name="team" value="B" />B팀
+    <input type="radio" name="team" value="C" />C팀
+    <input type="radio" name="team" value="D" />D팀
+
+    <h4>checkbox 확인</h4>
+    <input type="checkbox" name="color" value="RED" />RED
+    <input type="checkbox" name="color" value="YELLOW" />YELLOW
+    <input type="checkbox" name="color" value="ORANGE" />ORANGE
+    <input type="checkbox" name="color" value="GREEN" />GREEN
+
+    <h3>label 태그</h3>
+    <pre>
+      입력 관련 태그 (input, select, textarea 등) 의 제목을 나타내는 태그
+
+      사용법1 : label 태그 내부에 입력 관련 태그 하나 작성하면
+              label 태그를 클릭해도 입력 관련 태그가 선택된다.
+
+      사용법2 : 입력 관련 태그의 id 속성 값을 
+              label 태그의 for 속성 값에 똑같이 적으면 연결된다.
+    </pre>
+    <label> 클릭<input type="checkbox" /> </label>
+    <hr />
+    <input type="checkbox" id="test" />
+    <br />
+    <label for="test">
+      <img src="images/dogs/dog4.jpg" width="200px" height="200px" />
+
+      <br />
+      for에 작성된 명칭과 id에 작성된 명칭이 동일하다면 명칭이 동일한 체크박스가
+      선택됩니다.
+    </label>
+
+    <hr />
+    <h3>select / option 태그</h3>
+    <pre>
+      select : 클릭하면 밑으로 메뉴가 내려오는 입력 태그(드롭 다운)
+      option : select 클릭 시 보여질 메뉴를 작성하는 태그
+
+      * select 와 option은
+        input의 name, value가 분리된 태그로 생각하면 된다.
+    </pre>
+    <!-- 
+    radio, checkbox에서 선택한 값을 java나 DataBase로 전달할 때
+    name               :  value 
+    전달 값을 담을 바구니: 실제로 소비자가 선택한 전달값
+    -->
+
+    <input type="radio" name="음식" value="초밥" />초밥
+    <input type="radio" name="음식" value="샐러드" />샐러드
+    <input type="radio" name="음식" value="라면" />라면
+    <input type="radio" name="음식" value="햄버거" />햄버거
+
+    <br /><br /><br />
+    <select name="menu">
+      <option>초밥</option>
+      <option>샐러드</option>
+      <option>라면</option>
+      <option>햄버거</option>
+    </select>
+    <hr />
+    <h3>textarea</h3>
+    <pre>
+      text area 글자 지역
+      여러 줄을 입력할 수 있는 입력 상자
+
+      [속성]
+      name : 제출되는 곳에서 데이터를 읽을 때 필요한 이름
+      rows : textarea의 행 크기를 지정 (rows="5" -> 5행)
+      cols : textarea의 열 크기를 지정 (cols="5" -> 5열)
+    </pre>
+    <!--
+    textarea는 사이즈 조정 가능 
+    금지하려면 style="resize:none"
+    -->
+    <textarea name="intro" rows="5" cols="30" style="resize: none">
+      이름:
+      나이:
+      주소:
+    </textarea>
+    <br />
+    <h3>버튼 태그</h3>
+    <pre>
+      버튼을 만드는 태그
+      
+      type: 속성 값에 따라 동작이 달라짐
+
+      type="submit" 제출 버튼을 만들 때 사용
+      (button 태그의 기본 값 == type 속성을 작성하지 않으면 submit)
+      type="reset" 버튼이 포함된 form 태그의 모든 입력 값 초기화
+     
+      type="button" 아무런기능이 없는 버튼
+                  -> 제출 이외에 개발자가 원하는 기능으로 커스텀에서 사용할 때 사용
+                    JavaScript에서 기능 작성하고 추가하는 용도의 버튼
+    </pre>
+    <input type="color" />
+    <br />
+    <input type="file" />
+    <br />
+    <input type="hidden" value="숨겨진 값 소비자 눈에 안보이는 input 태그" />
+
+    <h3>fieldset/ legend</h3>
+    <pre>
+      fieldset : 테두리를 만들어서 영역을 지정
+      주로 form 태그 내부에서 입력 요소의 그룹을 구분할 때 사용
+
+      legend(제목) : fieldset 테두리에 이름을 지정하는 태그
+    </pre>
+
+    <hr />
+    <!-- action 내부에 #을 작성하면 다른 페이지로 이동하지 않겠다. 즉 개발용 설정-->
+    <form action="#">
+      <fieldset>
+        <legend>필수 입력 사항</legend>
+        <label> 아이디 : <input type="text" name="input-id" /></label>
+        <br />
+        <label> 비밀번호 : <input type="text" name="input-pw" /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>선택 입력 사항</legend>
+        <label>주소 : <input type="text" name="address" size="70" /></label>
+      </fieldset>
+
+      <!-- 아래 항목 2가지 모두 제출 버튼-->
+      <button type="submit">제출1번</button>
+      <button>제출2번</button>
+
+      <button type="reset">모두 지우기</button>
+      <button type="button">그냥 버튼</button>
+    </form>
+
+    <script>
+      /*
+      버튼을 클릭했을 때 본인인증 페이지로 이동하거나,
+      비밀번호 찾기 아이디 찾기를 진행할 때 새 페이지를 조그맣게 열거나
+
+      회원가입을 진행하기 전에 모두 입력하라는대로 작성되었는지 확인하고
+      form 제출을 진행할 때 사용
+      */
+      document.querySelector("[type=button]").addEventListener("click", () => {
+        alert("그냥 버튼의 클릭 확인용");
+      });
+    </script>
+  </body>
+</html>
